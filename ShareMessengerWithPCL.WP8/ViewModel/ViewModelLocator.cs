@@ -12,7 +12,8 @@ namespace ShareMessengerWithPCL.WP8.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            SimpleIoc.Default.Register<IHelloWorldService>(() => new HelloWorldService(Messenger.Default));
+            SimpleIoc.Default.Register<IHelloWorldService>(
+                () => new HelloWorldService(Messenger.Default));
 
             SimpleIoc.Default.Register<MainViewModel>();
         }
